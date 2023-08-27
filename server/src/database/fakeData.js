@@ -16,15 +16,19 @@ const fakeData = {
   categories: [
     {
       name: "iPhone",
+      img: "https://i.ibb.co/Jt14QJD/i-Phone-01.webp",
     },
     {
       name: "Tablets",
+      img: "https://i.ibb.co/7NqnMMZ/9-300x300.jpg",
     },
     {
       name: "Laptop",
+      img: "https://i.ibb.co/8YQ2KW6/10-300x300.jpg",
     },
     {
       name: "Accessories",
+      img: "https://i.ibb.co/RBm1LxR/p4-300x300.jpg",
     },
   ],
   products: [
