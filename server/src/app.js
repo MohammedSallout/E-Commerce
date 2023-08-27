@@ -2,6 +2,8 @@ import express from "express";
 import compression from "compression";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+import router from "./routes/index.js";
+import { serverError } from "./helpers/index.js";
 import cors from "cors";
 
 dotenv.config();
@@ -17,6 +19,10 @@ app.use(compression());
 app.use(cookieParser());
 app.use(cors());
 
+app.use("/api/v1", router);
+
 app.set("port", PORT || 3000);
+
+app.use(serverError);
 
 export default app;

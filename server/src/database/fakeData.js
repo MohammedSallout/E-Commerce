@@ -3,13 +3,13 @@ const fakeData = {
     {
       username: "mohammed",
       email: "mohammed@example.com",
-      password: "12345678",
+      password: "$2a$10$ijSZ0AfhqJj2Q0lSMdeFzeHjTeAB2E.c8Kz/kiNluffm2jyPi3h2K",
       userType: "admin",
     },
     {
       username: "mona",
       email: "mona@example.com",
-      password: "12345678",
+      password: "$2a$10$ijSZ0AfhqJj2Q0lSMdeFzeHjTeAB2E.c8Kz/kiNluffm2jyPi3h2K",
       userType: "regular",
     },
   ],
