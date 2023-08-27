@@ -11,6 +11,10 @@ const Category = sequelize.define("category", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  img: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
 });
 
 export default Category;
