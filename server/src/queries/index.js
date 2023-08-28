@@ -11,6 +11,12 @@ import {
   addCategoryQuery,
 } from "./categories/index.js";
 
+import {
+  getProductsQuery,
+  getProductQuery,
+  categoryProductsQuery,
+} from "./products/index.js";
+
 export {
   getUsersQuery,
   getUserQuery,
@@ -19,4 +25,7 @@ export {
   getCategoriesQuery,
   getCategoryQuery,
   addCategoryQuery,
+  getProductsQuery,
+  getProductQuery,
+  categoryProductsQuery,
 };

@@ -8,6 +8,12 @@ import {
 
 import { getCategories, getCategory, addCategory } from "./categories/index.js";
 
+import {
+  getProducts,
+  getProduct,
+  getCategoryProducts,
+} from "./products/index.js";
+
 export {
   getAllUsers,
   getOneUser,
@@ -17,4 +23,7 @@ export {
   getCategories,
   getCategory,
   addCategory,
+  getProducts,
+  getProduct,
+  getCategoryProducts,
 };
