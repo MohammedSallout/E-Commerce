@@ -1,0 +1,45 @@
+.Banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding: 10px 12px;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.Banner::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 80px);
+  height: 1px;
+  background-color: #eee;
+  bottom: 0;
+  left: -40px;
+}
+
+.Banner .left ul,
+.Banner .right ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.Banner .left ul li:last-child,
+.Banner .right ul li:last-child {
+  margin-left: 20px;
+  position: relative;
+}
+
+.Banner .left ul li:last-child::before,
+.Banner .right ul li:last-child::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 26px;
+  background-color: #ddd;
+  top: 0;
+  left: -10px;
+}
