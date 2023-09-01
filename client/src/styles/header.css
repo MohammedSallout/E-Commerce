@@ -1,0 +1,262 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 90px;
+  position: relative;
+}
+
+.Header.sticky {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 100px;
+}
+
+.Header.sticky .logo img {
+  margin-top: -10px;
+  height: 115px;
+}
+
+.Header .logo img {
+  width: 180px;
+  height: 120px;
+}
+
+.Header .nav,
+.Header .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header .nav li,
+.Header .icons li {
+  margin: 0 20px;
+}
+
+.Header .nav .l,
+.Header .nav .x {
+  display: none;
+}
+
+.Header .icons li a {
+  transition: var(--main-duration);
+}
+
+.Header .icons li:not(:nth-child(2)) a:hover {
+  color: var(--main-color);
+}
+
+.Header .icons .cart {
+  position: relative;
+}
+
+.Header .icons .cart a .cart-count {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color);
+  left: 14px;
+  bottom: -2px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.Header .nav li a,
+.Header .nav .drop-down {
+  font-weight: 500;
+  font-size: 20px;
+  color: #444;
+  cursor: pointer;
+  transition: var(--main-duration);
+}
+
+.Header .nav li a:hover,
+.Header .nav .drop-down:hover {
+  color: var(--main-color);
+}
+
+.Header .icons li a,
+.Header .icons .menu {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.Header .icons .menu {
+  cursor: pointer;
+  display: none;
+}
+
+.Header .nav .drop-down ul {
+  position: absolute;
+  background-color: #fefefe;
+  bottom: -200px;
+  box-shadow: 3px 3px 15px #aaa;
+  padding: 10px 20px 20px 20px;
+  width: 250px;
+  height: 200px;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.Header .nav .drop-down ul.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Header .nav .drop-down ul:not(.hidden) {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.Header .nav .drop-down ul li {
+  margin: 20px 0;
+}
+
+.Header .nav .drop-down ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+  transition: var(--main-duration);
+}
+
+.Header .nav .drop-down ul li a:hover {
+  color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+  .Header .nav {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: -40px;
+    top: 0;
+    z-index: 30;
+    background-color: #333;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.5s ease;
+  }
+
+  .Header .nav li {
+    margin: 15px 0 15px 100px;
+  }
+
+  .Header .nav.visible {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .Header.nav-visible .nav {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .Header .nav li:first-child {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .Header .nav li.m {
+    margin-top: 210px;
+  }
+
+  .Header .nav li.l,
+  .Header .nav li.x {
+    display: block;
+  }
+
+  .Header .nav li.x {
+    font-weight: 900;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--main-color);
+  }
+
+  .Header .nav li a,
+  .Header .nav li.drop-down {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .Header .nav .drop-down {
+    position: relative;
+  }
+
+  .Header .nav .drop-down ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(10px);
+  }
+
+  .Header .nav .drop-down:hover ul {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .Header .nav .drop-down ul li {
+    margin: 15px 0;
+  }
+
+  .Header .nav .drop-down ul li a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .Header .icons .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .Header {
+    margin: 0;
+  }
+
+  .Header .nav {
+    width: 95%;
+  }
+
+  .Header .logo img {
+    width: 160px;
+    height: 110px;
+  }
+
+  .Header .icons li {
+    margin: 0 15px;
+  }
+
+  .Header .icons .cart a .cart-count {
+    width: 22px;
+    height: 22px;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+
+  .Header .icons li a,
+  .Header .icons .menu {
+    font-size: 28px;
+  }
+}
