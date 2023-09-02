@@ -1,0 +1,198 @@
+.Landing {
+  height: calc(100vh - 130px);
+}
+
+.Landing ul.slick-dots li button {
+  background-color: #777;
+  padding: 4px 20px;
+}
+
+.Landing ul.slick-dots li.slick-active button {
+  background-color: #E52E06;
+  padding: 4px 20px;
+  border-radius: 10px;
+}
+
+.Landing ul.slick-dots li {
+  margin: 0 15px 20px 15px;
+}
+
+.Landing .left-01 {
+  background-image: url("https://i.ibb.co/6gsBbDt/x2.jpg");
+  background-position: 50% 20%;
+  height: calc(100vh - 130px);
+  padding: 60px;
+}
+
+.Landing .left-02 {
+  background-image: url("https://i.ibb.co/DG0QzFB/x1.jpg");
+  background-position: 52% 34%;
+  height: calc(100vh - 130px);
+  padding: 60px;
+}
+
+.Landing .left-01 h4, .Landing .left-02 h4 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28.8px;
+  color: #E52E06;
+  margin-top: 60px;
+}
+
+.Landing .left-01 h1, .Landing .left-02 h1 {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 64px;
+  color: #333333;
+  margin: 20px 0;
+}
+
+.Landing .left-01 p, .Landing .left-02 p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #555;
+  width: 40%;
+  margin-bottom: 40px;
+}
+
+.Landing .left-01 a, .Landing .left-02 a {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  background-color: #E52E06;
+  padding: 20px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.Landing .left-01 a:hover, .Landing .left-02 a:hover {
+  background-color: #333333;
+}
+
+.Landing .left-01 a .arrow, .Landing .left-02 a .arrow {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+  .Landing .left-01 {
+    background-position: 45% 24%;
+  }
+  
+  .Landing .left-02 {
+    background-position: 50% 30%;
+  }
+  
+  .Landing .left-01 h4, .Landing .left-02 h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22.2px;
+  }
+  
+  .Landing .left-01 h1, .Landing .left-02 h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+  
+  .Landing .left-01 p, .Landing .left-02 p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    width: 40%;
+  }
+  
+  .Landing .left-01 a, .Landing .left-02 a {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 18px 30px;
+    border-radius: 50px;
+  }
+  
+  .Landing .left-01 a .arrow, .Landing .left-02 a .arrow {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 991px) {
+  .Landing {
+    height: calc(90vh - 150px);
+    text-align: center;
+  }
+  
+  .Landing .left-01 {
+    background-image: none;
+    background-color: #F8F8F8;
+    height: calc(90vh - 150px);
+  }
+  
+  .Landing .left-02 {
+    background-image: none;
+    background-color: #F8F8F8;
+    height: calc(90vh - 150px);
+  }
+
+  .Landing .left-01 h4, .Landing .left-02 h4 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28.2px;
+    margin-top: 40px;
+  }
+  
+  .Landing .left-01 h1, .Landing .left-02 h1 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+  
+  .Landing .left-01 p, .Landing .left-02 p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 50%;
+    margin: 30px auto 60px auto;
+  }
+
+  .Landing .left-01 a, .Landing .left-02 a {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 20px 40px;
+    border-radius: 50px;
+  }
+}
+
+@media(max-width: 767px) {
+  .Landing .left-01 h4, .Landing .left-02 h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22.2px;
+    margin-top: 34px;
+  }
+  
+  .Landing .left-01 h1, .Landing .left-02 h1 {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  .Landing .left-01 p, .Landing .left-02 p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 100%;
+    margin: 30px auto 60px auto;
+  }
+
+  .Landing .left-01 a, .Landing .left-02 a {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 16px 32px;
+    border-radius: 50px;
+  }
+}

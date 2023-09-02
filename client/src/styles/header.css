@@ -12,6 +12,8 @@
   top: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   height: 100px;
+  background-color: #fefefe;
+  z-index: 90;
 }
 
 .Header.sticky .logo img {
@@ -74,6 +76,10 @@
   color: #444;
   cursor: pointer;
   transition: var(--main-duration);
+}
+
+.Header .nav .drop-down ul {
+  z-index: 3;
 }
 
 .Header .nav li a:hover,
@@ -145,6 +151,7 @@
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 0;
+    display: none;
     transition: opacity 0.8s ease, transform 0.5s ease;
   }
 
