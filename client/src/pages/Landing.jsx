@@ -3,12 +3,8 @@ import { Carousel } from "antd";
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const Landing = () => {
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
-
   return (
-    <Carousel afterChange={onChange} className="Landing">
+    <Carousel className="Landing">
       <div>
         <div className="left-01">
           <h4>SALE UP TO 30% OFF</h4>
