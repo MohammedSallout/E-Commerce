@@ -7,11 +7,13 @@ import {
   MenuOutlined,
   CloseOutlined,
 } from "@ant-design/icons";
+import axios from "axios";
 
 function Header() {
   const [navVisible, setNavVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [data, setData] = useState([]);
 
   const toggleNav = () => {
     setNavVisible(!navVisible);
@@ -37,6 +39,16 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    axios
+      .get("/api/v1/categories")
+      .then((res) => res.data.data)
+      .then((list) => setData(list))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div
       className={`Header ${navVisible ? "nav-visible" : ""} ${
@@ -44,7 +56,7 @@ function Header() {
       }`}
     >
       <div className="logo">
-        <a href="#">
+        <a href="/">
           <img
             src="https://i.ibb.co/mB8f9JT/infinity-logo.jpg"
             alt="Logo"
@@ -58,31 +70,26 @@ function Header() {
           <CloseOutlined />
         </li>
         <li>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">Products</a>
+          <a href="/products">Products</a>
         </li>
         <li className="drop-down" onClick={toggleDropdown}>
           Categories
           <DownOutlined />
           <ul className={dropdownVisible ? "" : "hidden"}>
-            <li>
-              <a href="#">iPhone</a>
-            </li>
-            <li>
-              <a href="#">Tablets</a>
-            </li>
-            <li>
-              <a href="#">Laptop</a>
-            </li>
-            <li>
-              <a href="#">Accessories</a>
-            </li>
+            {data.map((ele) => {
+              return (
+                <li key={ele.categoryId}>
+                  <a href={`/categories/${ele.categoryId}`}>{ele.name}</a>
+                </li>
+              );
+            })}
           </ul>
         </li>
         <li className="c">
-          <a href="#">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
         <li className="l">
           <a href="/login">Log In</a>
@@ -95,7 +102,7 @@ function Header() {
           </a>
         </li>
         <li className="cart">
-          <a href="#">
+          <a href="/cart">
             <ShoppingOutlined />
             <span className="cart-count">0</span>
           </a>
