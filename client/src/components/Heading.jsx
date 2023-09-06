@@ -5,7 +5,7 @@ const HeadingStyle = styled.div`
 h2 {
   font-size: 30px;
   font-weight: 500;
-  padding: 80px 100px 0 100px;
+  padding: 80px 80px 0 80px;
   line-height: 30px;
   color: rgb(51, 51, 51);
 
