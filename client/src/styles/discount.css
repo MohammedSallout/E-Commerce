@@ -1,0 +1,94 @@
+.Discount {
+  background-image: url("https://i.ibb.co/sm3TjDp/main-banner-01.jpg");
+  background-position: 52% 34%;
+  height: calc(100vh - 130px);
+  padding: 60px;
+}
+
+.Discount .content {
+  width: 40%;
+  text-align: center;
+}
+
+.Discount .btn {
+  display: inline-block;
+  padding: 18px 34px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20.4px;
+}
+
+.Discount h4 {
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #333333;
+  margin: 20px 0;
+}
+
+.Discount a {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #333;
+  transition: 0.5s;
+}
+
+.Discount a:hover {
+  color: var(--main-color);
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+  .Discount  {
+    background-position: 50% 30%;
+  }
+
+  .Discount h4 {
+    font-size: 38px;
+  }
+
+}
+
+@media(max-width: 991px) {
+  .Discount {
+    background-image: none;
+    background-color: #E6EBEF;
+    background-image: none;
+    height: calc(90vh - 80px);
+    text-align: center;
+  }
+
+  .Discount .content {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media(max-width: 767px) {
+  .Discount .content {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .Discount h4 {
+    font-size: 34px;
+  }
+}
+
+@media(max-width: 500px) {
+  .Discount .content {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .Discount h4 {
+    font-size: 28px;
+  }
+}
